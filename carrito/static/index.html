@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrito — accesorios para el escritorio</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <p class="eyebrow">Tienda demo</p>
+      <h1>Carrito</h1>
+      <p class="lede">Accesorios para el escritorio. Precios en EUR, envío fijo e IVA al final.</p>
+    </div>
+    <button type="button" class="cart-toggle" id="abrir-bolsa" aria-controls="bolsa">
+      Bolsa <span class="badge" id="badge">0</span>
+    </button>
+  </header>
+
+  <div class="layout">
+    <main>
+      <section class="grid" id="catalogo" aria-label="Catálogo"></section>
+    </main>
+
+    <aside class="bolsa" id="bolsa" aria-label="Bolsa de la compra">
+      <div class="bolsa-head">
+        <h2>Tu bolsa</h2>
+        <button type="button" class="text-btn" id="vaciar">Vaciar</button>
+      </div>
+      <ul class="lineas" id="lineas"></ul>
+      <p class="vacio" id="vacio">Aún no hay nada. Elige un accesorio.</p>
+
+      <form class="cupon" id="form-cupon">
+        <label for="cupon">Cupón</label>
+        <div class="row">
+          <input id="cupon" name="cupon" type="text" autocomplete="off" placeholder="VERANO20" spellcheck="false">
+          <button type="submit">Aplicar</button>
+        </div>
+        <p class="hint" id="cupones-hint"></p>
+      </form>
+
+      <dl class="resumen" id="resumen"></dl>
+    </aside>
+  </div>
+
+  <footer>
+    <p>Envío 4,99 € · 5 % al alcanzar 3 o más unidades · IVA 21 % · EUR.</p>
+    <p class="fine">Los totales salen del motor de precios de Python, sin redondear en la página.</p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
